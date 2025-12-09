@@ -2,11 +2,21 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #f4f4f4;
+  color: #111;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark {
+  background-color: #181a1b;
+  color: #eee;
 }
 header {
   background: #333;
   color: #fff;
   padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 nav a {
   color: #ffbc42;
@@ -25,8 +35,68 @@ main {
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
+body.dark main {
+  background: #25292e;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.45);
+}
 footer {
   text-align: center;
   padding: 1em;
   color: #aaa;
+}
+#theme-toggle {
+  background: #ffbc42;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1.3em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 1em;
+}
+input[type="search"] {
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 1em;
+  width: 220px;
+}
+#notes-list li {
+  margin: 0.6em 0;
+  background: #f4f7fa;
+  padding: 0.7em;
+  border-radius: 7px;
+  position: relative;
+  list-style: none;
+}
+body.dark #notes-list li {
+  background: #31353a;
+}
+#notes-list .delete-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+form#note-form {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+button[type="submit"] {
+  background: #198754;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
 }

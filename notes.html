@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>My Rust Notes</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
 </head>
 <body>
   <header>
@@ -13,15 +14,20 @@
       <a href="resources.html">Resources</a>
       <a href="notes.html">My Notes</a>
     </nav>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+    <input id="note-search" type="search" placeholder="Search notes...">
   </header>
   <main>
     <h2>Progress & Notes</h2>
-    <p>Add your study notes and progress logs here. For example:</p>
-    <ul>
-      <li>2025-12-09: Finished the first three chapters of "The Rust Programming Language".</li>
-      <li>2025-12-10: Completed basic exercises on Rustlings.</li>
-      <!-- Add more notes as you learn! -->
+    <ul id="notes-list">
+      <!-- Notes loaded from localStorage -->
     </ul>
+    <h3>Add/Edit Note</h3>
+    <form id="note-form">
+      <input type="date" id="note-date" required>
+      <textarea id="note-text" rows="3" placeholder="What did you learn?" required></textarea>
+      <button type="submit">Save Note</button>
+    </form>
   </main>
   <footer>
     <p>&copy; 2025 My Rust Journey</p>

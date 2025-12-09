@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Rust Learning Resources</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
 </head>
 <body>
   <header>
@@ -13,26 +14,28 @@
       <a href="resources.html">Resources</a>
       <a href="notes.html">My Notes</a>
     </nav>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+    <input id="resource-search" type="search" placeholder="Search resources...">
   </header>
   <main>
     <h2>Official</h2>
-    <ul>
-      <li><a href="https://www.rust-lang.org/">Rust Official Website</a></li>
-      <li><a href="https://doc.rust-lang.org/book/">The Rust Programming Language (Book)</a></li>
-      <li><a href="https://doc.rust-lang.org/">Rust Documentation</a></li>
-      <li><a href="https://play.rust-lang.org/">Rust Playground</a></li>
+    <ul class="resources-list">
+      <li data-label="official"><a href="https://www.rust-lang.org/">Rust Official Website</a></li>
+      <li data-label="book"><a href="https://doc.rust-lang.org/book/">The Rust Programming Language (Book)</a></li>
+      <li data-label="docs"><a href="https://doc.rust-lang.org/">Rust Documentation</a></li>
+      <li data-label="playground"><a href="https://play.rust-lang.org/">Rust Playground</a></li>
     </ul>
     <h2>Courses & Tutorials</h2>
-    <ul>
-      <li><a href="https://www.udemy.com/topic/rust/">Udemy Rust Courses</a></li>
-      <li><a href="https://www.youtube.com/results?search_query=rust+programming">YouTube Tutorials</a></li>
-      <li><a href="https://rustlings.cool/">Rustlings: Small exercises to get you used to reading and writing Rust code</a></li>
+    <ul class="resources-list">
+      <li data-label="course"><a href="https://www.udemy.com/topic/rust/">Udemy Rust Courses</a></li>
+      <li data-label="youtube"><a href="https://www.youtube.com/results?search_query=rust+programming">YouTube Tutorials</a></li>
+      <li data-label="rustlings"><a href="https://rustlings.cool/">Rustlings</a></li>
     </ul>
     <h2>Communities</h2>
-    <ul>
-      <li><a href="https://users.rust-lang.org/">Rust Users Forum</a></li>
-      <li><a href="https://discord.com/invite/rust-lang">Rust Discord</a></li>
-      <li><a href="https://www.reddit.com/r/rust/">Reddit r/rust</a></li>
+    <ul class="resources-list">
+      <li data-label="forum"><a href="https://users.rust-lang.org/">Rust Users Forum</a></li>
+      <li data-label="discord"><a href="https://discord.com/invite/rust-lang">Rust Discord</a></li>
+      <li data-label="reddit"><a href="https://www.reddit.com/r/rust/">Reddit r/rust</a></li>
     </ul>
   </main>
   <footer>
